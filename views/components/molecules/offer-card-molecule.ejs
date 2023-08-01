@@ -1,0 +1,10 @@
+<div class="relative h-fit w-fit flex justify-center">
+    <%- include('../atoms/offer-image-atom.ejs', offer) %>
+    <%- include('../atoms/offer-discount-atom.ejs', offer) %>
+    
+    <div class="absolute bottom-0 bg-white p-7 mx-4 flex flex-col gap-2 mb-[-12%] drop-shadow-lg rounded-tl-2xl rounded-tr-2xl">
+        <%- include('../atoms/offer-destination-atom.ejs', offer) %> 
+        <%- include('../atoms/offer-tagline-atom.ejs', offer) %>
+        <%- include('../atoms/offer-price-atom.ejs', offer) %>
+    </div>
+</div>

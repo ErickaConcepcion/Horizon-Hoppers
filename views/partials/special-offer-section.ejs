@@ -1,0 +1,16 @@
+<section class="mb-36 flex flex-col gap-14">
+    <div class="flex flex-col items-center ">
+        <% const data = {tagTitle: 'TRAVEL OFFER & DISCOUNT', tagColor: 'text-emerald-700', dashColor: 'bg-emerald-700'} %>
+        <%- include('../components/molecules/section-tag-molecule.ejs', {data}) %>
+        <h2 class="mb-4 text-5xl font-black text-emerald-950 px-[5%]">
+            SPECIAL TRAVEL OFFER
+        </h2>
+        <p class="px-[5%] md:px-[15%] lg:px-[25%]">Escape to paradise with our exclusive travel offer! Discover breathtaking destinations, indulge in luxurious accommodations, and create memories to last a lifetime, all while enjoying unbeatable discounts.</p>
+    </div>
+    <div class="px-[15%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-20">
+        <% offersData.forEach(offer => { %>
+            <%- include('../components/molecules/offer-card-molecule.ejs', {offer})%>
+        <% }) %>
+    </div>
+
+</section>
