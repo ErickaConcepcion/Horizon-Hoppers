@@ -12,6 +12,11 @@ app.get('/', (req, res)=> {
     res.render('pages/landing-page.ejs', {adventureCategories, offersData, carouselData})
 })
 
+app.get('/tours', (req, res)=> {
+    res.render('pages/tours.ejs')
+})
+
+
 
 
 app.listen(3000, ()=> {
