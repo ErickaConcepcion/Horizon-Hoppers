@@ -408,6 +408,122 @@ const destinations = [
       
     ],
   },
+  {
+    country: 'Japan',
+    countryImage: 'https://i.pinimg.com/564x/48/fd/5f/48fd5fc56804f7d32d6fc4a9683ac1fe.jpg',
+    discounted: true,
+    discount: 55,
+    popular: true,
+    pricePerPerson: 2999, 
+    dayNightFormat: '5D/4N', 
+    numberOfPeople: 4, 
+    location: 'Japan',  
+    packageTitle: "Embrace the Journey: Unveiling Japan's Timeless Wonders",  
+    numberOfReviews: 15,  
+    ratingOutOfFive : 5, 
+    description: 'Uncover the Japanese tradition and innovation as you tour vibrant cities, serene temples, and stunning landscapes.', 
+    picture: 'https://images.pexels.com/photos/1325837/pexels-photo-1325837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    tours: [
+      {
+        id: 1,
+        tourCardImage: 'https://images.pexels.com/photos/161401/fushimi-inari-taisha-shrine-kyoto-japan-temple-161401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        tourCardRating: '9.0 Great Experience',
+        tourCardTitle: "Kyoto Shrine",
+        tourCardDays: '1 Day',
+        tourCardPax: '3+',
+        tourCardDestination: 'Japan',
+        tourCardWishList: true,
+        details: {
+          images: [
+            'https://i.pinimg.com/564x/b5/8a/89/b58a89f28f45812b2996623fe885cffe.jpg','https://i.pinimg.com/564x/64/6f/57/646f5720a53bc9cee90f1b9d92c2f751.jpg','https://i.pinimg.com/564x/56/2c/c1/562cc1987ef74328398461db4d021144.jpg','https://i.pinimg.com/564x/26/10/20/26102082a58ee16eee99631aada2e011.jpg','https://i.pinimg.com/564x/9a/de/99/9ade9987b025dd463a6cda791ff9f340.jpg'
+          ],
+          overview: "Amidst the historical tapestry of Kyoto, the Kyoto Shrine emerges as a sublime embodiment of Japan's deep-rooted spiritual essence, where every step within its sacred precincts leads to a journey of introspection and cultural connection. The shrine's tranquil ambiance, carefully nurtured through centuries, offers a sanctuary for reflection, while the meticulous architectural marvels adorning its landscape stand as a testament to human creativity and devotion, inviting travelers to explore the intricate beauty that intertwines nature, artistry, and faith."
+        }
+      },
+      {
+        id: 2,
+        tourCardImage: 'https://i.pinimg.com/564x/e3/63/8e/e3638ec4c03c6937bd8c3f0fc728a6f7.jpg',
+        tourCardRating: '9.0 Superb',
+        tourCardTitle: "Shibuya",
+        tourCardDays: '2 Days',
+        tourCardPax: '3+',
+        tourCardDestination: 'Japan',
+        tourCardWishList: true,
+        details: {
+          images: [
+           'https://i.pinimg.com/564x/13/cc/4f/13cc4fd9fe861b27e84a075253105af1.jpg','https://i.pinimg.com/564x/33/c2/9a/33c29a79b26a15418a064210e27c0bcf.jpg','https://i.pinimg.com/564x/2e/dc/bd/2edcbdfccd0eef513697065af554f5bc.jpg','https://i.pinimg.com/564x/35/03/18/350318df90be56fa3d8c5daafb1e3580.jpg','https://i.pinimg.com/564x/f8/90/1f/f8901f0fa79bb938610e80bef7a4c455.jpg'
+          ],
+          overview: "Situated at the crossroads of modernity in Tokyo, Shibuya asserts itself as a pulsating and vibrant epicenter, where the kinetic energy of its dynamic streets converges with the iconic scramble crossing, creating a mesmerizing synergy that encapsulates the spirit of the city's relentless innovation and the harmonious coexistence of tradition and progress. The bustling thoroughfares are alive with the constant flow of people, a testament to the dynamism of contemporary Tokyo life, while the legendary scramble crossing, often likened to a controlled chaos, presents an electrifying spectacle that embodies the city's bustling heartbeat, symbolizing not only the rapid pace of urban existence but also the essence of Japan's global influence and cultural magnetism."
+        }
+      },
+      {
+        id: 3,
+        tourCardImage: 'https://i.pinimg.com/564x/c5/da/bc/c5dabca191b31dc0b424bae18111fe98.jpg',
+        tourCardRating: '9.0 Superb',
+        tourCardTitle: "Hokkaido",
+        tourCardDays: '1 Day',
+        tourCardPax: '3+',
+        tourCardDestination: 'Japan',
+        tourCardWishList: true,
+        details: {
+          images: [
+            'https://i.pinimg.com/564x/4c/ed/83/4ced838dac0b8eab0e2467f2f88efe23.jpg','https://i.pinimg.com/564x/5f/79/55/5f7955a8439754f8f7703803cd51c961.jpg','https://i.pinimg.com/564x/1c/7e/0a/1c7e0a7f80f69b46b4be6fac697eb094.jpg','https://i.pinimg.com/564x/33/84/cb/3384cb61141994acba28518aaf242bb2.jpg','https://i.pinimg.com/564x/ce/33/b5/ce33b511d63103e5c4b8f2f3b60d642f.jpg','https://i.pinimg.com/564x/3a/93/e9/3a93e9d6d5de1e6813b6d65c655d0b99.jpg'
+        ],
+          overview: "Spread across the northern expanse of Japan, Hokkaido stands as an alluring invitation to immerse oneself in the embrace of unspoiled natural beauty, a sprawling canvas painted with the delicate hues of untouched landscapes that span from the verdant tapestry of lush forests to the serene mirror-like surfaces of tranquil lakes, and further to the majestic peaks of snow-covered mountains that rise as guardians of the region's untamed grandeur. This captivating destination extends an enchanting refuge for those who seek respite in nature's sanctuary, where each step becomes a journey through the purest expressions of wilderness, unveiling the interconnectedness of life and the profound impact of the environment on the human soul."
+        }
+      },
+      {
+        id: 4,
+        tourCardImage: 'https://i.pinimg.com/564x/3a/8a/37/3a8a374e01b1bb00d97f959a15705a0b.jpg',
+        tourCardRating: '8.0 Superb',
+        tourCardTitle: "Mount Fuji",
+        tourCardDays: '1 Day',
+        tourCardPax: '3+',
+        tourCardDestination: 'Japan',
+        tourCardWishList: true,
+        details: {
+          images: [
+            'https://i.pinimg.com/564x/0e/ed/ea/0eedeac60a6b7436b63ab497d76ee62a.jpg','https://i.pinimg.com/564x/aa/03/12/aa0312f79af3b802d395bea30a2b7878.jpg','https://i.pinimg.com/564x/ae/6c/e2/ae6ce2fcb357ae6e000ed77b194b2b06.jpg','https://i.pinimg.com/564x/7b/35/61/7b3561aa8cd81006389dca4b270380b4.jpg','https://i.pinimg.com/564x/de/0e/e3/de0ee39be59b147d65d72400984d0ae0.jpg'
+        ],
+          overview: "Mount Fuji, with its majestic and timeless presence gracing the distant horizon, stands as an enduring and revered symbol of Japan's grandeur, weaving a narrative that transcends generations and cultures, captivating the hearts and minds of all fortunate enough to lay eyes upon its towering beauty. Its iconic silhouette, often shrouded in an ethereal veil of mist or framed by the changing hues of day and night, encapsulates not only the geological forces that have shaped Japan's landscapes but also the spiritual resonance that this natural wonder evokes, embodying a profound connection between humanity and the awe-inspiring forces of the natural world. As an emblem of both physical elevation and metaphorical inspiration, Mount Fuji's enduring allure holds within its shadowed contours a reflection of the nation's history, resilience, and the universal reverence for the majesty of the Earth."
+        }
+      },
+    ],
+    itinerary: [
+      {
+        count: '01',
+        title: 'Day 1: Spiritual Tranquility and Architectural Marvels',
+        time: '9:00 am to 6:00 pm',
+        description: " Immerse in the sacred haven of tranquility and exquisite architectural beauty.",
+        inclusion: ['Free Drinks', 'Free Umbrella', 'Free Tour', 'Free Shrine Pass']
+      },
+      {
+        count: '02',
+        title: 'Day 2: Vibrant Streets and Urban Pulse',
+        time: '9:00 am to 8:00 pm',
+        description: "Experience bustling urban energy, iconic crossing, vibrant Tokyo hub.",
+        inclusion: ['Free Umbrella', 'Free drinks', 'Free Lunch']
+      },
+      {
+        count: '03',
+        title: 'Day 3: Nature Retreat from Lakes to Mountains',
+        time: '8:00 am to 5:00 pm',
+        description: "Untamed nature: lakes, forests, mountains - Hokkaido's allure.",
+        inclusion: ['Souvenirs', 'Free Tour', 'Free Photoshoot']
+      },
+      {
+        count: '04',
+        title: "Day 4:  Majestic Icon: Horizon's Silent Sentinel",
+        time: '5:00 am to 7:00 pm',
+        description: "Witness the iconic peak, nature's majesty, silent contemplation - Mount Fuji",
+        inclusion: ['Free Water', 'Free Jacket', 'Free Entrance Fee']
+      },
+      
+
+
+      
+    ],
+  },
   
 ]
 
