@@ -1,66 +1,62 @@
-<div class="bg-white relative  h-[630px] w-[390px] mx-4">
-  
-    <div class="absolute right-0 mt-5 bg-emerald-700 ">
-      <h6 class="py-2 px-4 text-white "><span class="text-xl font-bold font-raleway">$ <%- priceperperson ;%></span> / per person</h6>
-    </div>
-  
-    <div class="flex flex-col h-full w-full">
-      
-      <div class="flex-1 bg-gray-400 bg-[url('/assets/stats-images/package1.jpg')] bg-cover bg-no-repeat">
-
-        <div class="absolute top-0 left-0 right-0 bottom-0 z-10">
-          <div class="flex items-center w-full h-full">
-            <!-- Use the 'h-full' class to set the height of the flex container to fill the parent -->
-            <div class="bg-dodger-blue text-white w-full mx-8 py-3  justify-center flex flex-row gap-x-4">
-              <!-- Add 'mt-auto' to push this div to the bottom -->
-              <ul class="flex text-xs">
-                <li class="border-r border-gray-400 px-3"><i class="fa-regular fa-clock"></i> <%- daynightformat ;%></li>
-                <li class="border-r border-gray-400 px-3"><i class="fa-solid fa-user-group"></i> People: <%- numberOfPeople ;%></li>
-                <li class="px-3"><i class="fa-solid fa-location-dot"></i> <%- location ;%></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+<div class="w-full flex flex-col shadow-md hover:-translate-y-2 transition-all duration-500">
+    <!-- TOP CARD-->
+    <div class="relative">
+      <div class="bg-emerald-700 absolute right-0 mt-5 ">
+        <h6 class="py-2 px-4 text-white "><span class="text-xl font-bold font-raleway">$ <%= place.pricePerPerson ;%> / per person</h6>
       </div>
-      <div class="flex-1">
-        <div class="flex flex-col  h-full px-10 justify-center gap-3">
-          <div class="">
-            <p class="text-2xl font-raleway font-bold font-midnight"><%- packageTitle ;%></p>
-          </div>
-          <div class="flex gap-3 flex-row">
-            <div class="">
-              <p class="text-sm font-opensans text-gray-600">(<%- numberOfReviews ;%> reviews)</p>
+      <figure>
+        <img src='<%= place.picture ;%>' class="h-[250px] w-full object-cover">
+      </figure>
+    
+      <!-- FLOATING BAR-->
+      <div class ="bg-white -300 ">
+          <!-- SECTION1-->
+          <div class = "">
+            <div class = "bg-white px-8">
+              <div class="bg-dodger-blue -mt-6 py-3 mb-9 ml-30 mr-30  relative text-center text-white ">
+                <div class = "flex flex-row w-full justify-center items-center h-fit">
+                    <li class="-r -gray-400 px-3 text-xs list-none"><i class="fa-regular fa-clock"></i> <%= place.dayNightFormat ;%> </li>
+                    <li class="-r -gray-400 px-3 text-xs list-none"><i class="fa-solid fa-user-group"></i> <%= place.numberOfPeople ;%></li>
+                    <li class="px-3 text-xs list-none"><i class="fa-solid fa-location-dot "></i> <%= place.location ;%> </li>
+                </div>
+              </div>
+              <!-- Title Card -->
+              <div class = " mt-9 mb-4">
+                <a href="/tours/<%= place.location %>" class="hover:text-emerald-500" >
+                  <p class="text-2xl font-raleway font-bold font-midnight"><%= place.packageTitle ;%></p>
+                </a>
+              </div>
+              <!--Review/Ratings-->
+              <div class = " mb-4 flex flex-row">
+                <p class="text-sm font-opensans text-gray-600 p-1">(<%= place.numberOfReviews ;%> reviews)</p>
+                <%- include('../atoms/ratingstars', {  ratingOutOfFive : place.ratingOutOfFive}); %>
+              </div>
+              <!--Content-->
+              <div class="mb-4">
+                <p class="text-base font-opensans"><%= place.description ;%>.</p>
+              </div> 
             </div>
-            <%- include('../atoms/ratingstars', {  ratingOutOfFive : ratingOutOfFive}); %>
           </div>
-          <div>
-            <p class="text-base font-opensans"><%- description ;%>.</p>
-          </div>
-        </div>
-        <div class="flex font-opensans bg-white ">
-          <div class="flex-1 p-6 gap-3 border border-b-0 flex items-center justify-center">
-            
-            <button class="flex-shrink-0 font-semibold flex items-center gap-2 bg-transparent focus:outline-none group">
-              <span class="group-hover:text-dodger-blue">Book Now</span>
-              <i class="fas fa-arrow-right text-emerald-700 group-hover:text-dodger-blue"></i>
+      </div>
+    </div>
+    <!-- BOTTOM CARD-->
+    <div class="bg-white mt-auto">
+      <!-- BUTTONS-->
+      <div class="flex flex-row mt-7 border-t-2">
+          <div class = "flex-1 flex items-center justify-center border-r-2">
+            <button class="flex-shrink-0 py-5 font-semibold flex items-center gap-102 bg-transparent focus:outline-none  group">
+              <a href="/booking">
+                <span class="group-10hover:text-dodger-blue">Book Now</span>
+                <i class="fas fa-arrow-right p-1 text-emerald-700 group-10 hover:text-dodger-blue"></i>
+              </a>
             </button>
-       
-        </div>
-
-        <div class="flex-1 p-6 gap-3 border border-b-0  flex items-center justify-center">
-            
-          <button class="flex-shrink-0 font-semibold flex items-center gap-2 bg-transparent focus:outline-none group">
-            <span class="group-hover:text-dodger-blue">Wish List</span>
-            <i class="far fa-heart text-emerald-700 group-hover:text-dodger-blue"></i>
-          </button>
-     
-      </div>
-
-
-
-      
-        </div>
-        
+          </div>
+          <div class="flex-1 flex items-center justify-center">
+            <button class="flex-shrink-0 py-5 font-semibold flex items-center gap-102 bg-transparent focus:outline-none group">
+                <span class="group-10hover:text-dodger-blue">Wish List</span>
+                <i class="far fa-heart p-1 text-emerald-700 group-10 hover:text-dodger-blue"></i>
+            </button>
+          </div>
       </div>
     </div>
-  </div>
+</div>

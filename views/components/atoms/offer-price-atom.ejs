@@ -1,5 +1,12 @@
 <div class="flex flex-row gap-2 text-lg font-bold">
-    <h5 class="text-emerald-400">Price:</h5>
-    <del class="text-emerald-400">₱<%= offer.offerActualPrice %> </del>
-    <ins class="text-emerald-400">₱<%= offer.offerDiscountedPrice %></ins>
+    <h5 class="text-yellow-500">Price:</h5>
+    <del class="text-yellow-500">
+        
+        ₱<%= offer.pricePerPerson %> </del>
+
+    <% const discountedPrice = offer.pricePerPerson - (offer.pricePerPerson * offer.discount/100) %>
+
+    <ins class="text-yellow-500">₱ 
+        <%= discountedPrice %>
+    </ins>
 </div>

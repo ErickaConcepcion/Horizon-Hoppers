@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="/assets/logos/logo.png">
+    <link rel="stylesheet" href="/assets/styles/style.css"> 
+    <link rel="stylesheet" href="/assets/styles/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title><%= title %></title>
+</head>
+<body>
+    <%- include('../components/molecules/header-molecule.ejs') %>
+    <%- body %>
+    <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/arrow-up.ejs') %>
+
+    <script>
+        // JavaScript to change header background on scroll
+        const header = document.getElementById('main-header');
+        const topHeader = document.getElementById('top-header');
+        const scrollThreshold = 100; // Adjust this value to determine when to change the background color
+        const scrollUpIcon = document.getElementById('scroll-up-icon')
+      
+        const toggler = document.querySelector('.toggler');
+        const menuBlock = document.querySelector('.menu-block');
+        const mobileMenu = document.querySelector('.mobile-menu');
+      
+        toggler.addEventListener('click', () => {
+          menuBlock.classList.toggle('hidden');
+        });
+      
+        const playButton = document.getElementById('play-button')
+        const videoPlayer = document.getElementById('video-player')
+        const closeIcon = document.getElementById('close-icon')
+  
+        function updateHeaderBackground() {
+          if (window.scrollY > scrollThreshold) {
+            header.classList.add('bg-on-scroll'); //add class on scroll
+            scrollUpIcon.classList.remove('hidden')
+            topHeader.classList.add('hidden'); // hide top-header on small screens
+            mobileMenu.classList.remove('mt-2') //remove mobile menu margine
+            topHeader.classList.remove('pb-2')
+          } else {
+            header.classList.remove('bg-on-scroll');  //remove class on scroll
+            scrollUpIcon.classList.add('hidden')
+            mobileMenu.classList.add('mt-2') //add top-header
+            
+            topHeader.classList.remove('hidden')  //display block top-header 
+          }
+      
+          if (window.innerWidth >= 768) {
+            topHeader.classList.remove('hidden'); // display top-header on medium and larger screens
+            topHeader.classList.add('pb-2')
+          }
+        }
+
+        function showVideoPlayer() {
+          videoPlayer.classList.replace('hidden', 'flex')
+        }
+      
+        function closeVideoPlayer() {
+          videoPlayer.classList.replace('flex', 'hidden')
+      
+        }
+
+        //Tour Filter
+        const selectedItems = document.querySelectorAll(".button-group");
+        const optionsContainers = document.querySelectorAll(".option-container");
+        const groupTitle = document.querySelectorAll(".group-title");
+
+        selectedItems.forEach((selected, index) => {
+          selected.addEventListener("click", () => {
+            optionsContainers.forEach((container, containerIndex) => {
+              if(containerIndex == index) {
+                container.classList.toggle("active");
+                container.classList.toggle("z-50");
+                container.classList.toggle("hidden");
+              }
+              else {
+                container.classList.remove("active");
+                container.classList.remove("z-50");
+                container.classList.add("hidden");
+              }
+            })
+            
+          });
+          
+          const input = optionsContainers[index].querySelector('.search-box');
+          input.addEventListener('click', (e) => {
+            e.stopPropagation();
+          });
+
+          const items = optionsContainers[index].querySelectorAll('.option-item');
+          let groupItem = groupTitle[index];
+          items.forEach((item, index) => {
+            item.addEventListener('click', () => {
+              groupItem.textContent = item.textContent;
+              input.value = '';
+            })
+          })
+        });
+        // Add a scroll event listener to update the header background
+      
+        window.addEventListener('scroll', updateHeaderBackground);
+        playButton.addEventListener('click', showVideoPlayer)
+        closeIcon.addEventListener('click', closeVideoPlayer)
+      </script>
+
+    
+</body>
+</html>

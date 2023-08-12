@@ -67,3 +67,19 @@ nav ul li {
 .bg-on-scroll {
   background-color:	rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity as needed */
 }
+
+.option-container {
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.option-container.active {
+  max-height: 250px;
+  opacity: 1;
+  overflow-y: scroll;
+}

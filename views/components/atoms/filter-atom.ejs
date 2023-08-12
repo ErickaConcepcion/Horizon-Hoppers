@@ -1,0 +1,16 @@
+<div class="button-group w-full mx-auto relative">
+  <div class="flex items-center cursor-pointer justify-between py-2 px-4 h-full rounded-sm bg-white drop-shadow-md">
+    <div class="text-gray-600 group-title" id="groupTitle"><%= title %></div>
+    <i class="fa fa-angle-down text-emerald-700" aria-hidden="true"></i>
+  </div>
+  <div class="option-container absolute mt-2 bg-white rounded-md drop-shadow-md hidden">
+    <div class="px-4 py-2 relative mx-auto w-full ">
+      <input type="text" class="search-box w-full text-emerald-700 outline outline-1 outline-emerald-700 rounded-sm px-4 py-2">
+    </div>
+    <ul class="bg-white option-categories">
+      <% options.forEach(option => { %>
+        <li class="option-item hover:bg-emerald-700 hover:text-white hover:px-6 transition-all duration-400 ease-linear px-3 py-2 border bordey-7-gray capitalize"><%= option %></li>
+      <% }); %>
+    </ul>
+  </div>
+</div>

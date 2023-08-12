@@ -1,0 +1,218 @@
+<% title = "Booking" %>
+<%- include('../components/molecules/header-molecule.ejs') %>
+<%- include('../components/molecules/banner.ejs', {pagename: "Booking"})%>
+
+    <div class = "w-full h-full flex justify-center items-center">
+        <div class = "bg-white h-full p-10  flex flex-col md:flex-row lg:flex-row gap-10">
+          <!--FORM-->
+            <div class = "bg-gray-100 pb-12 flex w-fit ">
+              <!--FORM DETAILS-->
+              <div class = "h-full w-full sm:flex-col ">
+                <form>
+                  <div class = "flex flex-row">
+                    <div class = "p-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-number-1" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#047853" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M10 10l2 -2v8" />
+                      </svg>
+                    </div>
+                  <h2 class =" pt-7 p-2 text-3xl font-bold uppercase">your details</h2>
+                  </div>
+                  <!--Email-->
+                  <div id="FullName" class="p-4 flex flex-col md:flex-row lg:flex-row gap-x-5 gap-y-2 ">
+                    <div class = " ">
+                      <!-- First Name-->
+                      <div class = "mb-3">
+                        <label class = ""> First Name</label><br>
+                      </div>
+                      <input type="text" class = " w-72 h-10 border p-1 "name="">
+                    </div>
+                    <div class = " ">
+                      <!-- Last Name-->
+                      <div class = "mb-3">
+                        <label class = "">Last Name</label><br>
+                      </div>
+                      <input type="text" class = " w-72 h-10 border p-1 "name="">
+                    </div>
+                     
+                  </div>
+
+
+                  <!--Email-->
+                  <div id="FullName" class="p-4 flex flex-col md:flex-row lg:flex-row gap-x-5 ">
+                    <div class = " ">
+                      <!-- First Name-->
+                      <div class = "mb-3">
+                        <label class = "">Email</label><br>
+                      </div>
+                      <input type="text" class = " w-72 h-10 border p-1 "name="">
+                    </div>
+                    <div class = " ">
+                      <!-- Last Name-->
+                      <div class = "mb-3">
+                        <label class = "">Confirm Email</label><br>
+                      </div>
+                      <input type="text" class = " w-72 h-10 border p-1 "name="">
+                    </div>
+                     
+                  </div>
+
+                  <!--Phone-->
+                  <div id="FullName" class="p-4 flex flex-col md:flex-row lg:flex-row gap-x-5 ">
+                    <div class = " ">
+                      <!-- First Name-->
+                      <div class = "mb-3">
+                        <label class = "">Phone</label><br>
+                      </div>
+                      <input type="text" class = " w-72 h-10 border p-1 "name="">
+                    </div>
+                    
+                     
+                  </div>
+
+
+                
+                  
+                </form>
+
+                <!--PAYMENT INFORMATION-->
+                <form>
+                  <div class = "flex flex-row">
+                    <div class = "p-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-number-2" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#047853" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M10 8h3a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 0 -1 1v2a1 1 0 0 0 1 1h3" />
+                      </svg>
+                    </div>
+                  <h2 class =" pt-7 p-2 text-3xl font-bold uppercase">payment information</h2>
+                  </div>
+                  <!--Email-->
+                  <div id="FullName" class="p-4 flex flex-col md:flex-row lg:flex-row gap-x-5 ">
+                    
+                    <div class = "  w-full ">
+                      <!-- Last Name-->
+                      <div class = "mb-3">
+                        <label class = "">Name on Card</label><br>
+                      </div>
+                      <input type="text" class = " w-full h-10 border p-1 "name="">
+                    </div>
+                     
+                  </div>
+
+
+                  <!--Card Details-->
+                  <div id="FullName" class="p-4 flex flex-col md:flex-row lg:flex-row gap-x-5 ">
+                    <div class = " ">
+                      <!-- Card Number-->
+                      <div class = "mb-3">
+                        <label class = "">Card Number</label><br>
+                      </div>
+                      <input type="text" class = " w-72 h-10 border p-1 "name="">
+                    </div>
+                    <div class = "w-full h-full mt-5 ">
+                      <img src="https://demo.bosathemes.com/html/travele/assets/images/cards.png">
+                    </div>
+                     
+                  </div>
+
+                 <!-- Card Security-->
+                  <div id="FullName" class="p-4 flex flex-col md:flex-row lg:flex-row gap-x-5 ">
+                    <div class = " ">
+                      <!-- Exp Date-->
+                      <div class = "mb-3">
+                        <label class = "">Expiration Date</label><br>
+                      </div>
+                      <input type="text" class = " w-36  h-10 border p-1 "name="">
+                    </div>
+                    <div class = "w-fit ">
+                      <!-- Year-->
+                      <div class = "mb-3">
+                        <label class = ""></label><br>
+                      </div>
+                      <input type="text" class = "w-36  h-10 border p-1 "name="">
+                    </div>
+                    <div class = "w-fit ">
+                      <!-- First Name-->
+                      <div class = "mb-3">
+                        <label class = "">Security Code</label><br>
+                      </div>
+                      <input type="text" class = " w-20  h-10 border p-1 "name="">
+                    </div>
+                    <div class = " mt-5 flex flex-row w-fit p-3">
+                      <img src="https://demo.bosathemes.com/html/travele/assets/images/icon_ccv.gif" class="w-fit">
+                      <p class="text-sm p-2">Last 3 digits</p>
+                    </div>
+                     
+                  </div>
+
+
+                
+                  
+                </form>
+              </div>
+            </div>
+            <!--SIDE BAR-->
+            <!--SUMMARY BAR-->
+            <div class=" h-fit w-fit">
+              <div class = "bg-gray-100 p-8 w- full h-full mb-10 flex flex-col border-b-4">
+                <div class = "p-5 w-80 m-2 mb-6 bg-emerald-700">
+                <p class ="text-base font-bold uppercase text-white text-center items-center">Summary</p>
+                </div>
+              <!--INFO-->
+                <div class = " m-2 w-full border-b-2 p-2 flex justify-between ">
+                  <p class ="text-base font-bold text-gray-700 text-center items-center">Package cost</p>
+                  <p class ="text-base  text-gray-700 text-center items-center">$300</p>
+                </div>
+                <div class = " m-2 w-full border-b-2 p-2 flex justify-between ">
+                  <p class ="text-base font-bold text-gray-700 text-center items-center">Dedicated Tour Guide</p>
+                  <p class ="text-base  text-gray-700 text-center items-center">$300</p>
+                </div>
+                <div class = " m-2 w-full border-b-2 p-2 flex justify-between ">
+                  <p class ="text-base font-bold text-gray-700 text-center items-center">Insurance</p>
+                  <p class ="text-base  text-gray-700 text-center items-center">$300</p>
+                </div>
+                <div class = " m-2 w-full border-gray-600 border-b-2 p-2 flex justify-between ">
+                  <p class ="text-base font-bold text-gray-700 text-center items-center">Tax</p>
+                  <p class ="text-base  text-gray-700 text-center items-center">$300</p>
+                </div>
+                <div class = " m-2 w-full  p-2 flex justify-between ">
+                  <p class ="text-base font-bold text-gray-700 text-center items-center">Total Cost</p>
+                  <p class ="text-base  text-gray-700 text-center items-center font-bold">$300</p>
+                </div>
+
+               
+            </div>
+            <!--HELP BAR-->
+            <div class = "bg-gray-100 p-8 w- full h-full mb-10 flex flex-col border-b-4">
+              <div class = "w-full h-full justify-center flex-col items-center ">
+                <div class = "flex justify-center flex-col items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#424242" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                  <path d="M15 7a2 2 0 0 1 2 2" />
+                  <path d="M15 3a6 6 0 0 1 6 6" />
+                </svg>
+                <p class = "p-3 pr-1 font-thin text-xl uppercase">Help and Support</p>
+                <p class = " font-bold text-3xl uppercase">123-456-789</p>
+                <p class = "p-4 pr-1 text-sm ">Monday to Friday 9:00am - 7:30pm</p>
+                </div>
+                <div>
+                  
+
+                </div>
+                
+              </div>
+            </div> 
+            <div class="text-center mt-12 mb-6 h-full">
+              <%- include('../components/atoms/cta-book-now.ejs', {content: "Checkout", redirect: "/booking", style: "uppercase font-bold shadow-inner shadow-emerald-900 text-white font-medium md:font-bold p-10 rounded-md bg-emerald-700 mt-4 uppercase h-full"})%>
+            </div>                
+            
+
+            
+          </div>
+        </div>
+        </div>
+       
+    

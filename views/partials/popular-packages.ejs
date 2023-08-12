@@ -1,42 +1,25 @@
-<div class = "bg-white mb-28 h-fit"> 
-    <div class="mx-40 mt-28">
-     <div class="flex items-center justify-center">
-        <div class="flex items-center justify-center">
-            <hr class="w-16 h-0.5 bg-emerald-700 border-0 mb-4 mr-4" >
-        </div>
-        
-        <p class="mb-4 font-raleway text-base font-bold text-emerald-700 text-center">
-             EXPLORE GREAT PLACES
-        </p> 
+<div class=" lg:px-[13%] 2xl:px-[20%] xxl:h-full sm:w-full flex flex-col justify-center items-center bg-white mb-20">
+  <div class="">
+    <!-- INTRODUCTION TEXT-->
+    <div class="flex items-center justify-center mt-10">
+      <% const data = {tagTitle: 'EXPLORE GREAT PLACES', tagColor: 'text-emerald-700', dashColor: 'bg-emerald-700'} %>
+      <%- include('../components/molecules/section-tag-molecule.ejs', {data}) %>
     </div>
+      <p class="mb-4 font-raleway text-6xl font-black text-midnight text-center">
+        POPULAR PACKAGES
+      </p>
+      <p class="leading-6 mb-12 overflow-wrap break-word text-neutral-800 text-center">
+        Discover the world's wonders with our popular travel packages! From the exotic charm of Bali to the breathtaking landscapes of the Swiss Alps, embark on a journey of a lifetime and make your travel dreams a reality.
+      </p>
+  </div>
+  
+  <div class="grid md:grid-cols-3 gap-4 px-10 md:px-6 lg:px-0">
+    <% places.forEach((place) => { %>
+      <%- include('../components/molecules/card-popular.ejs', {place}); %>
+    <% }); %>
+  </div>
 
-
-        <p class="mb-4 font-raleway text-6xl font-black text-midnight text-center">
-            POPULAR PACKAGES
-        </p>
-        <p class="leading-6 mb-12 overflow-wrap break-word text-neutral-800 text-center">
-          
-            Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent,<br> odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.
-        </p>
-    </div>
-    
-    <div class='  lg:gap-x-20 justify-items-center  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   '>
-        <%- include('../components/molecules/card-popular.ejs', {priceperperson: 1900, daynightformat: '7D/6N', numberOfPeople: 5, location: 'Malaysia',  packageTitle: 'Sunset view of beautiful lakeside resident',  numberOfReviews: 20,  ratingOutOfFive : 4, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.', picture: 'package1.jpg'}); %>
-        <%- include('../components/molecules/card-popular.ejs',{priceperperson: 1230,   daynightformat: '5D/4N' , numberOfPeople: 8, location: 'Canada', packageTitle: 'Experience the natural beauty of island', numberOfReviews: 20, ratingOutOfFive : 5, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.', picture: 'package1.jpg'}); %>
-        <%- include('../components/molecules/card-popular.ejs',{priceperperson: 2000,   daynightformat: '6D/5N',numberOfPeople: 6,  location: 'Portugal', packageTitle: 'Vacation to the water city of Portugal',  numberOfReviews: 20,  ratingOutOfFive : 6, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.', picture: 'package1.jpg'}); %>
-    </div>
-    <!-- <div class="text-center mt-12 mb-6">
-        <%- include('../components/atoms/cta-book-now.ejs', {content: "More Destination", redirect: "#", style: 'text-white px-10 py-4 uppercase rounded-sm bg-emerald-700 font-bold'})%>
-      </div>
-    -->
-    <div class="mx-40 mt-28">
-        <div class="flex items-center justify-center">
-            <div class="text-center mt-12 mb-6">
-                <%- include('../components/atoms/cta-book-now.ejs', {content: "More Destination", redirect: "#", style: 'text-white px-10 py-4 uppercase rounded-sm bg-emerald-700 font-bold'})%>
-            </div>
-        </div>
-   
-   
-           
-       </div>
-</div>
+  <div class="text-center mt-12 mb-6">
+    <%- include('../components/atoms/cta-book-now.ejs', {content: "View All Packages", redirect: "/booking", style: "shadow-inner shadow-emerald-900 text-white font-medium md:font-bold px-6 py-4 rounded-md bg-emerald-700 mt-4 uppercase"})%>
+  </div>
+</div> 

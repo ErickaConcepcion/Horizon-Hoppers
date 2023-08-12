@@ -12,85 +12,19 @@
     </div>
   </div>
 
-  <div class="grid md:grid-cols-2 gap-2">
-    <div class="grid grid-cols-2 gap-2">
-      <div>
-        <%- include('../components/molecules/destination-card.ejs', 
-          { 
-            imgSrc: 'https://demo.bosathemes.com/html/travele/assets/images/img1.jpg',
-            imageStyle: 'h-full w-full object-cover object-center',
-            ctaData: 
-              {
-                content: 'Thailand', 
-                redirect: '#', 
-                style: 'text-white font-medium px-6 py-2 bg-emerald-700 mt-4 uppercase'
-              },
-            location: 'Disney Land',
-            rating: 5
-            
-          }) 
-        %>
-      </div>
-
-      <div>
-        <%- include('../components/molecules/destination-card.ejs', 
-          { 
-            imgSrc: 'https://demo.bosathemes.com/html/travele/assets/images/img2.jpg',
-            imageStyle: 'h-full w-full object-cover object-center',
-            ctaData: 
-              {
-                content: 'Norway', 
-                redirect: '#', 
-                style: 'text-white font-medium px-6 py-2 bg-emerald-700 mt-4 uppercase'
-              },
-            location: 'Besseggen Ridge',
-            rating: 5
-            
-          }) 
-        %>
-      </div>
-    </div>
-
-    <div class="grid gap-2">
-      <div>
-        <%- include('../components/molecules/destination-card.ejs', 
-          { 
-            imgSrc: 'https://demo.bosathemes.com/html/travele/assets/images/img3.jpg',
-            imageStyle: 'w-full object-cover object-center',
-            ctaData: 
-              {
-                content: 'New Zealand', 
-                redirect: '#', 
-                style: 'text-white font-medium px-6 py-2 bg-emerald-700 mt-4 uppercase'
-              },
-            location: 'Oxolotan City',
-            rating: 5
-            
-          }) 
-        %>
-      </div>
-      <div>
-        <%- include('../components/molecules/destination-card.ejs', 
-          { 
-            imgSrc: 'https://demo.bosathemes.com/html/travele/assets/images/img4.jpg',
-            imageStyle: 'w-full object-cover object-center',
-            ctaData: 
-              {
-                content: 'Singapore', 
-                redirect: '#', 
-                style: 'text-white font-medium px-6 py-2 bg-emerald-700 mt-4 uppercase'
-              },
-            location: 'Marina Bay Sands',
-            rating: 5
-            
-          }) 
-        %>
-      </div>
+  <div class="">
+    <div class="grid md:grid-cols-2 gap-2">
+      <% places.forEach((place) => {%>
+        <% if (place.popular) { %>
+          <%- include('../components/molecules/destination-card.ejs', {place}) 
+          %>
+        <% } %>
+      <% }) %>
     </div>
   </div>
 
   <div class="text-center mt-12 mb-6">
-    <%- include('../components/atoms/cta-book-now.ejs', {content: "More Destination", redirect: "#", style: "shadow-inner shadow-emerald-900 text-white font-medium md:font-bold px-6 py-4 rounded-md bg-emerald-700 mt-4 uppercase"})%>
+    <%- include('../components/atoms/cta-book-now.ejs', {content: "More Destination", redirect: "/destination", style: "shadow-inner shadow-emerald-900 text-white font-medium md:font-bold px-6 py-4 rounded-md bg-emerald-700 mt-4 uppercase"})%>
   </div>
   
 </div>

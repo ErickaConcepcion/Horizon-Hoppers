@@ -8,8 +8,8 @@
         <p class="px-[5%] md:px-[15%] lg:px-[25%]">Escape to paradise with our exclusive travel offer! Discover breathtaking destinations, indulge in luxurious accommodations, and create memories to last a lifetime, all while enjoying unbeatable discounts.</p>
     </div>
     <div class="px-[15%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-20">
-        <% offersData.forEach(offer => { %>
-            <%- include('../components/molecules/offer-card-molecule.ejs', {offer})%>
+        <% places.forEach(place => { %>
+            <%- include('../components/molecules/offer-card-molecule.ejs', {offer: place})%>
         <% }) %>
     </div>
 

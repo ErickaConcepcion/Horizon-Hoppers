@@ -1,0 +1,28 @@
+<% title = 'Tour Details' %>
+
+<%- include('../components/molecules/banner.ejs', {pagename: "Details"})%>
+
+<%- include('../partials/tour-details-partial.ejs') %>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 10,
+      slidesPerView: 5,
+      loop: true,
+      freeMode: true,
+      loopedSlides: 5,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+
+    });
+    const swiper2 = new Swiper(".mySwiper2", {
+      autoplay: {
+        delay: 4000,
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+      loop: true,
+    });
+</script>

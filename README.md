@@ -1,4 +1,4 @@
-# Job Portal Multi-page Static Front-end Project
+# Travel Agency Multi-page Static Front-end Project
 
 Capstone Project
 

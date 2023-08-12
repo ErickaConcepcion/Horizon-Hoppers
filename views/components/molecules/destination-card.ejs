@@ -1,13 +1,13 @@
-<div class="relative group h-full">
+<div class="relative group ">
   <figure class="h-full">   
     <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50 group-hover:opacity-0 transition-opacity"></div>
-    <img src="<%= imgSrc %>" alt="" class="<%= imageStyle %>">
+    <img src="<%= place.countryImage %>" alt="" class="h-full w-full object-cover object-center">
   </figure>
   <div class="absolute top-5 left-5 text-white uppercase font-bold">
-    <%- include('../atoms/cta-book-now.ejs', ctaData) %>
+    <%- include('../atoms/cta-book-now.ejs', {content: place.country}) %>
   </div>
   <div class="absolute bottom-0 left-0 p-4 flex flex-col">
-    <a href="" class="text-white font-bold text-xl"><%= location %></a>
-    <%- include('../molecules/star-rating-molecule.ejs', { rating: rating }) %>
+    <a href="/tours/<%=place.country.toLowerCase() %>" class="text-white font-bold text-xl capitalize"><%= place.packageTitle %></a>
+    <%- include('../molecules/star-rating-molecule.ejs', { rating: 5 }) %>
   </div>
 </div>

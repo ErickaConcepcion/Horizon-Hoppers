@@ -1,0 +1,21 @@
+<div class="tour-details relative py-2 mb-4">
+  <div class="tour-count h-[80px] w-[80px] rounded-full absolute top-0 left-0 border-8 border-white px-4 z-50 bg-emerald-700 text-white font-bold flex justify-center items-center">
+    <%= item.count %>
+  </div>
+  <div class="tour-content ml-10 border-1 pl-12 sm:pl-14 md:pl-20 border-l-2 border-gray-200 flex flex-col gap-4">
+    <div class="tour-content-header">
+      <h2 class="text-2xl md:text-3xl font-bold"><%= item.title %></h2>
+      <h4 class="text-emerald-600 font-medium text-lg mt-2 md:text-xl"><%= item.time %></h4>
+    </div>
+    <div class="tour-content-description text-left text-gray-400 text-base font-medium md:text-lg">
+      <%= item.description %>
+    </div>
+    <div class="tour-content-inclusion">
+      <ul class="font-medium text-gray-400 text-base">
+        <% item.inclusion.forEach(x => { %>
+          <li><span><i class="fa fa-check text-emerald-700 mr-2" aria-hidden="true"></i></span><%= x %></li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</div>
