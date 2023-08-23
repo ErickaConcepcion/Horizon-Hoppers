@@ -1,7 +1,8 @@
 # Travel Agency Multi-page Static Front-end Project
+- Capstone project about travel agency 
 https://horizon-hoppers.vercel.app
 
-Capstone Project
+
 
 ## Technologies
 
