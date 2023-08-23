@@ -9,6 +9,7 @@ Capstone Project
 - Express
 - Express EJS Layout
 - Tailwind
+- Javascript
 
 ## How to run
 
